@@ -20,4 +20,15 @@ class MovieTest < ActiveSupport::TestCase
     m.year = 1970
     assert m.save
   end
+  
+  test "Test whether dependents are destroyed" do
+    m = Movie.find_by_title("Jaws")
+    assert m.reviews.length == 2
+    
+    deleted_movie_id = m.id
+    m.destroy
+    assert Review.find_all_by_movie_id(deleted_movie_id).length == 0
+    
+  end
+  
 end

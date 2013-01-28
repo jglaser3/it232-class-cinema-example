@@ -11,12 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130121194348) do
+ActiveRecord::Schema.define(:version => 20130128201752) do
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "genres_movies", :id => false, :force => true do |t|
+    t.integer "genre_id", :null => false
+    t.integer "movie_id", :null => false
+  end
 
   create_table "movies", :force => true do |t|
     t.string   "title"
     t.integer  "year"
     t.boolean  "seen"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "rating"
+    t.text     "content"
+    t.integer  "movie_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

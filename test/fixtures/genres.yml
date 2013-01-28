@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+thriller:
+  name: Thriller
+  description: "Has some suspenseful moments"
+
+comedy:
+  name: Comedy
+  description: "Has funny moments"

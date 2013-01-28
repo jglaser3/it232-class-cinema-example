@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+j1:
+  rating: 8
+  content: "Pretty scary!"
+  movie: jaws
+
+j2:
+  rating: 3
+  content: "OK"
+  movie: jaws

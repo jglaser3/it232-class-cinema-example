@@ -1,6 +1,9 @@
 class Movie < ActiveRecord::Base
   attr_accessible :seen, :title, :year
   
+  has_many :reviews, :dependent => :destroy
+  has_and_belongs_to_many :genres
+  
   validates :title, :presence => true
   validates :year, :numericality => true
   validate :check_year_for_range

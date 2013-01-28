@@ -1,4 +1,10 @@
 Cinema::Application.routes.draw do
+  resources :genres
+
+
+  resources :reviews
+
+
   resources :movies do
     collection do
       get 'search'
