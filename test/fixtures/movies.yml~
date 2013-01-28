@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-jaws:
-  title: Jaws
-  year: 1974
+one:
+  title: MyString
+  year: 1
   seen: false
 
-up:
-  title: Up
-  year: 2009
+two:
+  title: MyString
+  year: 1
   seen: false

@@ -11,4 +11,5 @@ class Movie < ActiveRecord::Base
     elsif self.year > 2013 then
       self.errors.add(:year, "must be 2013 or older")
     end
+  end
 end
