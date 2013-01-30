@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130128201752) do
+ActiveRecord::Schema.define(:version => 20130130203823) do
 
   create_table "genres", :force => true do |t|
     t.string   "name"
@@ -40,5 +40,7 @@ ActiveRecord::Schema.define(:version => 20130128201752) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "reviews", ["movie_id"], :name => "index_reviews_on_movie_id"
 
 end
