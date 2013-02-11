@@ -1,4 +1,10 @@
 Cinema::Application.routes.draw do
+  match "/login" => "sessions#new", :as => :login
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/logout" => "sessions#destroy", :as => :logout
+  match "/auth/failure" => "sessions#failure"
+  
+  resources :identities
   resources :users
 
 
