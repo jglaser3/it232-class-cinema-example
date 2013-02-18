@@ -9,6 +9,9 @@ Cinema::Application.routes.draw do
     collection do
       get 'search'
     end
+    member do
+      post 'add_genre_to'
+    end
   end
 
 

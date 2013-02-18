@@ -16,6 +16,15 @@ class MoviesController < ApplicationController
       @movies = Movie.where("title LIKE ?", match_term)
     end
   end
+  
+  def add_genre_to
+    g = Genre.find(params[:genre_id])
+    m = Movie.find(params[:movie_id])
+    
+    m.genres << g
+    
+    redirect_to m
+  end
 
   # GET /movies/1
   # GET /movies/1.json

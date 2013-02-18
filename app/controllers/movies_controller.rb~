@@ -9,6 +9,13 @@ class MoviesController < ApplicationController
       format.json { render json: @movies }
     end
   end
+  
+  def search
+    if params[:search_text]
+      match_term = "%" + params[:search_text] + "%"
+      @movies = Movie.where("title LIKE ?", match_term)
+    end
+  end
 
   # GET /movies/1
   # GET /movies/1.json
