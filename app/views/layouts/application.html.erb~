@@ -8,16 +8,6 @@
 </head>
 <body>
 
-<% if current_user %>
-
-<p><%= current_user.name %> is logged in</p>
-
-<% else %>
-
-<p>No one is logged in</p>
-
-<% end %>
-
 <%= yield %>
 
 </body>
